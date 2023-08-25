@@ -20,8 +20,8 @@ app.use('/images', express.static('public/images'))
 app.use('/auth', authController)
 app.use('/product', productController)
 app.use('/upload', uploadController)
-app.use('/health', (req, res) => {
-    "app is running..."
+app.get('/health', (req, res) => {
+    res.status(200).send("backend is running")
 })
 
 // start our server
