@@ -22,7 +22,7 @@ app.use('/product', productController)
 app.use('/upload', uploadController)
 
 // start our server
-app.listen(process.env.PORT, () => console.log('Server has been started successfully'))
+app.listen(5000, () => console.log('Server has been started successfully'))
 
 // server is on port 5000, client is on port 3000,
 // we are going to get a cors ERROR!!, but cors() removes that's error
