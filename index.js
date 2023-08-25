@@ -20,6 +20,9 @@ app.use('/images', express.static('public/images'))
 app.use('/auth', authController)
 app.use('/product', productController)
 app.use('/upload', uploadController)
+app.use('/health', (req, res) => {
+    "app is running..."
+})
 
 // start our server
 app.listen(5000, () => console.log('Server has been started successfully'))
